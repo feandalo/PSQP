@@ -133,7 +133,7 @@ void GallagherDescriptor::createFeatureVector(QImage image, int border) {
             invcov[i][j] =  ((cov[(i+1)%3][(j+1)%3] * cov[(i+2)%3][(j+2)%3]) - (cov[(i+1)%3][(j+2)%3]*cov[(i+2)%3][(j+1)%3])) / det;
 }
 
-float GallagherDescriptor::computeDistance(TileDescriptor *td, bool param) {
+float GallagherDescriptor::computeDistance(TileDescriptor *otherDescriptor, bool param) {
     GallagherDescriptor *desc1 = NULL;
     GallagherDescriptor *desc2 = NULL;
 
@@ -146,9 +146,9 @@ float GallagherDescriptor::computeDistance(TileDescriptor *td, bool param) {
 
     if (border == Tile::R || border == Tile::B) {
         desc1 = this;
-        desc2 = (GallagherDescriptor*) td;
+        desc2 = (GallagherDescriptor*) otherDescriptor;
     } else {
-        desc1 = (GallagherDescriptor*) td;
+        desc1 = (GallagherDescriptor*) otherDescriptor;
         desc2 = this;
     }
 
@@ -159,7 +159,7 @@ float GallagherDescriptor::computeDistance(TileDescriptor *td, bool param) {
     float diff1, diff2;
     float aux1, aux2, aux3, aux4, aux5, aux6;
 
-    if (size != td->getSize())
+    if (size != otherDescriptor->getSize())
         return -1.0;
 
     diff1 = 0.0;

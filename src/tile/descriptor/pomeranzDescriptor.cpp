@@ -25,12 +25,12 @@ PomeranzDescriptor::PomeranzDescriptor(float paramP, float paramQ)
 
 PomeranzDescriptor::~PomeranzDescriptor() {
     for (int i = 0; i < nx2; i++)
-        free(tileDesc[i]);
-    free(tileDesc);
+        free(tileDescriptor[i]);
+    free(tileDescriptor);
 }
 
 void PomeranzDescriptor::createFeatureVector(QImage image, int border) {
-    if (tileDesc != NULL)
+    if (tileDescriptor != NULL)
         return;
 
     this->image = image;
@@ -55,9 +55,9 @@ void PomeranzDescriptor::createFeatureVector(QImage image, int border) {
     }
     nx2 = 2 * size;
 
-    tileDesc = (float**) calloc(nx2, sizeof(float*));
+    tileDescriptor = (float**) calloc(nx2, sizeof(float*));
     for (int i = 0; i < nx2; i++)
-        tileDesc[i] = (float*) calloc(3, sizeof(float));
+        tileDescriptor[i] = (float*) calloc(3, sizeof(float));
 
     int tx1, ty1, tx2, ty2;
     float tileDescAux[3];
@@ -78,16 +78,16 @@ void PomeranzDescriptor::createFeatureVector(QImage image, int border) {
         tileDescAux[0] = ((float) pixel1.red());
         tileDescAux[1] = ((float) pixel1.green());
         tileDescAux[2] = ((float) pixel1.blue());
-        ColorConversion::RGBtoLAB(tileDescAux, tileDesc[i]);
+        ColorConversion::RGBtoLAB(tileDescAux, tileDescriptor[i]);
 
         tileDescAux[0] = ((float) pixel2.red());
         tileDescAux[1] = ((float) pixel2.green());
         tileDescAux[2] = ((float) pixel2.blue());
-        ColorConversion::RGBtoLAB(tileDescAux, tileDesc[size + i]);
+        ColorConversion::RGBtoLAB(tileDescAux, tileDescriptor[size + i]);
     }
 }
 
-float PomeranzDescriptor::computeDistance(TileDescriptor *td, bool param) {
+float PomeranzDescriptor::computeDistance(TileDescriptor *otherDescriptor, bool param) {
     PomeranzDescriptor *desc1 = NULL;
     PomeranzDescriptor *desc2 = NULL;
 
@@ -101,19 +101,19 @@ float PomeranzDescriptor::computeDistance(TileDescriptor *td, bool param) {
 
     if (border == Tile::R || border == Tile::B) {
         desc1 = this;
-        desc2 = (PomeranzDescriptor*) td;
+        desc2 = (PomeranzDescriptor*) otherDescriptor;
     } else {
-        desc1 = (PomeranzDescriptor*) td;
+        desc1 = (PomeranzDescriptor*) otherDescriptor;
         desc2 = this;
     }
 
-    float **td1 = desc1->getTileDesc();
-    float **td2 = desc2->getTileDesc();
+    float **td1 = desc1->getTileDescriptor();
+    float **td2 = desc2->getTileDescriptor();
 
     float dist = 0.0;
     float pred1, pred2;
 
-    if (size != td->getSize())
+    if (size != otherDescriptor->getSize())
         return -1.0;
 
     float aux;

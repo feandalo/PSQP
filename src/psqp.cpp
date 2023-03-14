@@ -20,10 +20,10 @@ PSQP::~PSQP() {
     solver = NULL;
 }
 
-void PSQP::setImage(QString imgFile) {
-    qDebug() << imgFile;
-    this->imgFile = imgFile;
-    image = new QImage(imgFile);
+void PSQP::setImage(QString imageFile) {
+    qDebug() << imageFile;
+    this->imageFile = imageFile;
+    image = new QImage(imageFile);
 }
 
 void PSQP::setPuzzleSize(int ncols, int nrows) {
