@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['gallagherdescriptor_0',['GallagherDescriptor',['../class_gallagher_descriptor.html',1,'GallagherDescriptor'],['../class_gallagher_descriptor.html#a585468b0ac02bae1c58b218a541a1779',1,'GallagherDescriptor::GallagherDescriptor()']]],
+  ['getcenter_1',['getCenter',['../class_graphics_scene.html#a26f949311ad55c07959226ff535e8519',1,'GraphicsScene']]],
+  ['getcompatibilitymatrix_2',['getCompatibilityMatrix',['../class_compatibility.html#a88e784774e29a3faca25265a76fe3016',1,'Compatibility']]],
+  ['getdescriptornames_3',['getDescriptorNames',['../class_p_s_q_p.html#a38537675c93ef8bf4321697f3396ebc9',1,'PSQP']]],
+  ['getdescriptors_4',['getDescriptors',['../class_tile.html#abeb1e2be3d2c13b688a7d31681e415bf',1,'Tile']]],
+  ['getheight_5',['getHeight',['../class_tile.html#aa6f4a58a953cb789206f17b8b217fb9c',1,'Tile']]],
+  ['getimage_6',['getImage',['../class_tile.html#a548b1855e3662ecb999385a865bd8be8',1,'Tile']]],
+  ['getmean_7',['getMean',['../class_gallagher_descriptor.html#ab4254fb1d65814ed79a479a5be95fbf6',1,'GallagherDescriptor']]],
+  ['getncols_8',['getNCols',['../class_tiled_image.html#a34f888ce8c91dd7a81e7b1f4bb38210a',1,'TiledImage']]],
+  ['getnrows_9',['getNRows',['../class_tiled_image.html#a4df0c7f8b472ca1d7044f3c5ff6812c7',1,'TiledImage']]],
+  ['getsinv_10',['getSinv',['../class_gallagher_descriptor.html#af01ddeb656df4c86d426504eaa701b98',1,'GallagherDescriptor']]],
+  ['gettiledescriptor_11',['getTileDescriptor',['../class_tile_descriptor.html#a4e8023786733dbb8fae15b531d922535',1,'TileDescriptor']]],
+  ['gettiledimage_12',['getTiledImage',['../class_p_s_q_p.html#a1ebaf8fd2c9ecac9f66383f7f44fd649',1,'PSQP']]],
+  ['gettiles_13',['getTiles',['../class_tiled_image.html#a13cb3e0cfc8c7d8d2bd05fc372cb15bf',1,'TiledImage']]],
+  ['getwidth_14',['getWidth',['../class_tile.html#a39f847f5c0e68febc9236807e6d3afb8',1,'Tile']]],
+  ['gradientdescent_15',['GradientDescent',['../class_gradient_descent.html',1,'GradientDescent'],['../class_gradient_descent.html#a8a51093c50ab46a3ecbc26a2ccacdfe0',1,'GradientDescent::GradientDescent()']]],
+  ['graphicsscene_16',['GraphicsScene',['../class_graphics_scene.html',1,'GraphicsScene'],['../class_graphics_scene.html#a903427d3411852d8d621f4f1d99122fa',1,'GraphicsScene::GraphicsScene()']]]
+];

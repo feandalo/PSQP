@@ -1,0 +1,8 @@
+<RCC>
+  <qresource>
+    <file>images/save.png</file>
+    <file>images/open.png</file>
+    <file>images/exec.png</file>
+    <file>images/ico.png</file>
+  </qresource>
+</RCC>
