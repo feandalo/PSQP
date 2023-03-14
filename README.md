@@ -1,7 +1,11 @@
 ## PSQP: Puzzle Solving by Quadratic Programming
 
-PSQP is a quadratic programming solver for image puzzles of rectangular tiles.  
+<img src="images/ico.png" width="60" align="left" hspace="50">
+
+PSQP is a quadratic programming solver for image puzzles of rectangular tiles. 
+
 It comprises of a global cost function, which is minimized to find the best permutation among tiles; and a local compatibility function, which gives a distance between tiles assigned to neighboring locations. 
+<br clear="left"/>
 
 ### Citing
 
@@ -27,6 +31,7 @@ brew install qt@4
 brew install gmp
 
 # Linux Ubuntu
+sudo add-apt-repository ppa:ubuntuhandbook1/ppa
 sudo apt install qt4-dev-tools
 sudo apt install libgmp-dev
 ```
@@ -36,7 +41,7 @@ sudo apt install libgmp-dev
 cd PSQP
 mkdir build
 cd build
-qmake ..
+qmake .. # or qmake-qt4 for Ubuntu
 make
 cd ..
 ```
@@ -50,11 +55,21 @@ cd ..
 
 ### Running PSQP
 ```bash
+# MacOS
+alias PSQP=´./PSQP.app/Contents/MacOS/PSQP´
 
-# Running with UI
-./PSQP
-
-# Running with CLI
-./PSQP <input image> <number of columns> <number of rows> <descriptor>[Pomeranz|Gallagher] <parameter p> <parameter q>
-
+# Ubuntu
+alias PSQP=´./PSQP´
 ```
+#### Running with UI
+```bash
+PSQP
+```
+
+#### Running with CLI
+```bash
+PSQP <input image> <number of columns> <number of rows> <descriptor>[Pomeranz|Gallagher] <parameter p> <parameter q>
+```
+
+### Attributions
+Icon from <a href="https://www.flaticon.com/free-icons/problem-solving" title="problem solving icons">Problem solving icons created by JunGSa - Flaticon</a>

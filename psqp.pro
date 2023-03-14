@@ -1,7 +1,7 @@
 TEMPLATE = app
 TARGET = PSQP
 
-copyapp.commands = $(COPY_DIR) ./PSQP.app ..
+copyapp.commands = $(COPY_DIR) ./PSQP* ..
 first.depends = $(first) copyapp
 export(first.depends)
 export(copyapp.commands)
@@ -17,7 +17,6 @@ QT += core \
     opengl
 LIBS += -L/usr/local/lib \ 
     -lgmp \
-    -framework OpenGL \
     -lpthread
 MOC_DIR += ./tmp
 UI_DIR += ./ui
