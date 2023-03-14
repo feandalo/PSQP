@@ -1,6 +1,6 @@
 ## PSQP: Puzzle Solving by Quadratic Programming
 
-<img src="images/ico.png" width="60" align="left" hspace="50">
+<img src="images/ico.png" width="60" vspace="20">
 
 PSQP is a quadratic programming solver for image puzzles of rectangular tiles. 
 
